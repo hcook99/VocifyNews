@@ -11,11 +11,14 @@ def main_app_render():
 def response():
     text = request.form['urlEntry']
     handler = TextHandler(text)
-    textAudio = handler.getAudio()
     if handler.isValid():
         title = handler.getTitle()
         article = handler.getArticle()
-        return render_template('result.html', title=title, article=article)
+        textAudio = handler.getAudio()
+        if handler.isValid():
+            return render_template('result.html', title=title, article=article)
+        else:
+            return render_template('index.html')
     return render_template('index.html')
 
 
