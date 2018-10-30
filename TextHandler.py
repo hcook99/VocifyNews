@@ -2,7 +2,7 @@ from aylienapiclient import textapi
 import ConvertTextToSpeech
 
 class TextHandler:
-    client = textapi.Client('62aa701a', '23eae5e0671529986aeaf58c87b7f64d')
+    client = textapi.Client('**********', '***************************')
     def __init__(self, urlEntryS):
         self.invalidURL = True
         try:
