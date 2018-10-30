@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Vocify News</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                font-family: Arial;
+                background: url('static/BackGround.jpg')  no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+
+
+            * {
+                box-sizing: border-box;
+            }
+
+
+            form.input_box input[type=text] {
+                padding: 10px;
+                font-size: 17px;
+                border: 1px solid grey;
+                float: left;
+                width: 80%;
+                background: #f1f1f1;
+            }
+
+            form.input_box button {
+                float: left;
+                width: 20%;
+                padding: 10px;
+                background: #2196F3;
+                color: white;
+                font-size: 17px;
+                border: 1px solid grey;
+                border-left: none;
+                cursor: pointer;
+            }
+
+            form.input_box button:hover {
+                background: #0b7dda;
+            }
+
+            form.input_box::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .container-audio {
+              width: 60%;
+              height: auto;
+              margin: 20px auto;
+              overflow: hidden;
+            }
+            audio {
+                width:100%;
+            }
+            .box{
+                padding:10px;
+                border: black;
+                background: #ffffff;
+                width: 60%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            h1{
+                border: black;
+            }
+
+        </style>
+</head>
+<body>
+
+    <form class="input_box" method="post" style="max-width:400px; margin-left: auto; margin-right: auto">
+            <input type="text" placeholder="Enter Another URL..." name="urlEntry">
+            <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="container-audio">
+        <audio controls>
+            <source src="{{url_for('static', filename='temp.mp3')}}">
+        </audio>
+    </div>
+    <div class="box">
+        <h1>{{ title }}</h1>
+        <p>{{ article }}</p>
+    </div>
+</body>
+</html>
