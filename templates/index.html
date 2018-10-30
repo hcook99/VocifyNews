@@ -50,10 +50,22 @@
                 clear: both;
                 display: table;
             }
+
+            p{
+                padding:10px;
+                border: black;
+                background: white;
+                width: 60%;
+                margin-right: auto;
+                margin-left: auto;
+            }
         </style>
     </head>
     <body>
-        <form class="input_box" method="post" style="max-width:500px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+        <p>
+            <strong>Tip: </strong>Convert any article to a listenable podcast. Just enter the URL of the news article.
+        </p>
+        <form class="input_box" method="post" style="max-width:500px;margin-right: auto;margin-left: auto">
             <input type="text" placeholder="Enter URL..." name="urlEntry">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
