@@ -23,7 +23,7 @@ gTTS-token==1.1.2
 gunicorn==19.9.0
 httplib2==0.11.3
 idna==2.7
-Jinja2==2.10
+Jinja2==2.11.3
 langdetect==1.0.7
 MarkupSafe==1.0
 nltk==3.2.4
