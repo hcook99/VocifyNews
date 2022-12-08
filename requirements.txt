@@ -2,7 +2,7 @@ aylien-apiclient==0.7.0
 beautifulsoup4==4.6.3
 bs4==0.0.1
 cachetools==2.1.0
-certifi==2018.10.15
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 Flask==1.0.2
